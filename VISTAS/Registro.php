@@ -35,6 +35,7 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
+                    <br><br>
                     <h3 class="title has-text-black">Registro</h3>
                     <div class="box">
                     <form action="../index.php"  method="post"  id="registro" name="registro">
