@@ -21,8 +21,8 @@
         <section class="navega">
               <nav>
                 
-                  <img class="utp" src="imagenes/att.png" alt="">
-                  <img class="att" src="imagenes/logo_utp.png" alt="">
+                  <img class="utp" src="IMG/att.png" alt="">
+                  <img class="att" src="IMG/logo_utp.png" alt="">
                   <h1 style="text-align: center; color: rgb(255, 255, 255); font-size:250%; margin-top: 0.5%; " >ATT Reservas de transporte</h1>
                 
               </nav>
@@ -40,7 +40,7 @@
                     <hr class="login-hr">
                     <div class="box">
                         <figure class="avatar">
-                            <img class="tamaño" src="imagenes/user.png">
+                            <img class="tamaño" src="IMG/user.png">
                         </figure>
                         <form>
                             <div class="field">
