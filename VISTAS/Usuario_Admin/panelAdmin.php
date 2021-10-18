@@ -129,9 +129,9 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container">
+                <div class="container-fluid">
 
-<!-- SECCIONES PEGAR AQUI -->
+                        <!-- SECCIONES PEGAR AQUI -->
                 
                         <!-- Earnings (Monthly) Card Example -->
                         
@@ -144,7 +144,7 @@
                         <!-- Pending Requests Card Example -->
                         
                         
-                    </div>
+                    
                     
                     <!-- Content Row -->
 
