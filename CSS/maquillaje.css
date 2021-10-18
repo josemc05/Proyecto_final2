@@ -1,0 +1,70 @@
+
+.crema {
+    background-image: url('../imagenes/fondo.jpg');
+    
+      Background-attachment:fixed;
+  }
+
+  section img {
+    display: block;
+    margin: auto;
+    height: 18%;
+    width: 18%;
+    border-radius: 50%;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+.tamaño {
+  display: block;
+  margin: auto;
+  height: 22%;
+  width: 22%;
+  border-radius: 50%;
+}
+
+.cremita{
+  background-color: darkgreen;
+}
+
+.fondoacceder{
+  background-color: green;
+}
+
+
+.navega {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+header {
+  background: #4B2E83;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+nav {
+  float: left; /* Desplazamos el nav hacia la izquierda */
+  width: 100%;
+}
+
+.utp{
+  display: block;
+  float: left;
+  height: 4.5%;
+  width: 4.5%;
+  border-radius: 50%;
+  margin: 0.5%;
+}
+
+.att{
+  display: block;
+  float: right;
+  height: 4.5%;
+  width: 4.5%;
+  border-radius: 50%;
+  margin: 0.5%;
+}
