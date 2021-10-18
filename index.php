@@ -64,7 +64,7 @@
                         </form>
                     </div>
                     <p class="has-text-grey">
-                        <a href="#">Crear cuenta</a> <!--&nbsp;·&nbsp;
+                        <a href="Registro.php">Crear cuenta</a> <!--&nbsp;·&nbsp;
                         <a href="../">Forgot Password</a> &nbsp;·&nbsp;
                         <a href="../">Need Help?</a>-->
                     </p>
