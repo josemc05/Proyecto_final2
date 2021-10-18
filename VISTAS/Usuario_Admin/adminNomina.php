@@ -54,8 +54,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Revision de Peticiones</a>
-                        <a class="collapse-item" href="cards.html">Agregar Peticion</a>
+                        <a class="collapse-item" href="#">Revision de Peticiones</a>
+                        <a class="collapse-item" href="#">Agregar Peticion</a>
                     </div>
                 </div>
             </li>
@@ -129,40 +129,85 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container">
+                <div class="container-fluid">
 
-<!-- SECCIONES PEGAR AQUI -->
-                
-                        <!-- Earnings (Monthly) Card Example -->
-                        
-                        <!-- Earnings (Monthly) Card Example -->
-                        
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        
-
-                        <!-- Pending Requests Card Example -->
-                        
-                        
+                    <!-- INICIO DE BARRA -->
+                    <div class="row-fluid">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">        
+                                    <div class="col mr-2">        
+                                    <h5>Juan Armando Montevideo</h5>    
+                                        <p class="card-text ">Cedula:8-2096-5222 </p>
+                                        <p class="card-text">Telefono: 6205-5585</p>
+                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
+                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
+                                    </div>    
+                                    <div class="col-auto">
+                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
+                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Content Row -->
-
-
-                        <!-- Area Chart -->
-                        
-                    <!-- Content Row -->
-                  
-
-                        <!-- Content Column -->
+                    <hr>
+                    <!-- FINAL DE BARRA -->
+                        <!-- INICIO DE BARRA -->
+                        <div class="row-fluid">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">        
+                                    <div class="col mr-2">        
+                                    <h5>Juan Armando Montevideo</h5>    
+                                        <p class="card-text ">Cedula:8-2096-5222 </p>
+                                        <p class="card-text">Telefono: 6205-5585</p>
+                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
+                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
+                                    </div>    
+                                    <div class="col-auto">
+                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
+                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- FINAL DE BARRA -->
+                        <!-- INICIO DE BARRA -->
+                        <div class="row-fluid">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">        
+                                    <div class="col mr-2">        
+                                    <h5>Juan Armando Montevideo</h5>    
+                                        <p class="card-text ">Cedula:8-2096-5222 </p>
+                                        <p class="card-text">Telefono: 6205-5585</p>
+                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
+                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
+                                    </div>    
+                                    <div class="col-auto">
+                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
+                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- FINAL DE BARRA -->
                       
                     <!--IMPORTANTE DEL FOOTER /.container-fluid -->
-                    </div>
+               
                 <!-- /.container-fluid -->
 
-                </div>
             <!-- End of Main Content -->
-
+            </div>
+            </div>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
