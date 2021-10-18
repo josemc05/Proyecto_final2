@@ -41,7 +41,9 @@ html,body {
   .has-text-black{
     color: black;
   }
-  
+  .has-text-grey a:hover{
+    color: black;
+  }
   .field{
     padding-bottom: 10px;
   }
