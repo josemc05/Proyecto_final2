@@ -49,12 +49,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-car"></i>
-                    <span>Reporte de Estado Vehiculo</span></a>
+                    <span>Estado</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="reservasTransportista.php">
                     <i class="far fa-list-alt"></i>
-                    <span>Reservas</span></a>
+                    <span>Viajes</span></a>
             </li>
 
 
@@ -161,7 +161,7 @@
                                         <label for="exampleFormControlFile1">Foto del Vehiculo</label>
                                             <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                 </div>
-                                <a href="panelAdmin.php" class="btn btn-primary btn-user btn-block">
+                                <a href="panelTranspor.php" class="btn btn-primary btn-user btn-block">
                                     Guardar Cambios
                                 </a>
                                 
