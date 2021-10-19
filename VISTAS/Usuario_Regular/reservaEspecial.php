@@ -150,9 +150,9 @@
 
                                     <div class="col mr-2">        
                                     <h5>Modelo vehiculo 1</h5>    
-                                        <p class="card-text ">Matricula: M-111-1111 </p>
+                                        <!--<p class="card-text ">Matricula: M-111-1111 </p>-->
                                         <p class="card-text">Estado: Disponible</p>
-                                        <p class="card-text ">Capacidad: 5 personas</p>
+                                        <!--<p class="card-text ">Capacidad: 5 personas</p>-->
                                     </div>    
                                     <div class="col-auto">
                                     <!--<a type="button" class="btn btn-danger float-right ml-2">Cancelar reserva</a>-->   
@@ -175,9 +175,9 @@
 
                                     <div class="col mr-2">        
                                         <h5>Modelo vehiculo 2</h5>    
-                                        <p class="card-text ">Matricula: M-111-1111 </p>
+                                        <!--<p class="card-text ">Matricula: M-111-1111 </p>-->
                                         <p class="card-text">Estado: Disponible</p>
-                                        <p class="card-text ">Capacidad: 5 personas</p>
+                                        <!--<p class="card-text ">Capacidad: 5 personas</p>-->
                                     </div>    
                                     <div class="col-auto">
                                     <!--<a type="button" class="btn btn-danger float-right ml-2">Cancelar reserva</a>-->
@@ -200,9 +200,9 @@
 
                                     <div class="col mr-2">        
                                         <h5>Modelo vehiculo 3</h5>    
-                                        <p class="card-text ">Matricula: M-111-1111 </p>
+                                        <!--<p class="card-text ">Matricula: M-111-1111 </p>-->
                                         <p class="card-text">Estado: Disponible</p>
-                                        <p class="card-text ">Capacidad: 50 personas</p>
+                                        <!--<p class="card-text ">Capacidad: 50 personas</p>-->
                                     </div>    
                                     <div class="col-auto">
                                     <!--<a type="button" class="btn btn-danger float-right ml-2">Cancelar reserva</a>-->   
