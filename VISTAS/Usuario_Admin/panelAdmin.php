@@ -60,7 +60,10 @@
                 </div>
             </li>
             
-            
+            <li class="nav-item">
+                <a class="nav-link" href="usuarios.php">
+                    <i class="far fa-user"></i>
+                    <span>Administrar Usuarios</span></a>
             <li class="nav-item">
                 <a class="nav-link" href="agregarTransport.php">
                     <i class="fas fa-user-plus"></i>

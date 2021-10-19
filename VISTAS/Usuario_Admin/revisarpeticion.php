@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Revision de Peticiones</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -60,7 +60,10 @@
                 </div>
             </li>
             
-            
+            <li class="nav-item">
+                <a class="nav-link" href="usuarios.php">
+                    <i class="far fa-user"></i>
+                    <span>Administrar Usuarios</span></a>
             <li class="nav-item">
                 <a class="nav-link" href="agregarTransport.php">
                     <i class="fas fa-user-plus"></i>
@@ -91,7 +94,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Reservas de Transporte</h2>
+                    <h2>Revision de Peticiones</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -143,10 +146,11 @@
 
                                     <div class="col mr-2">     
                                     <h5></h5>    
-                                        <p class="card-text ">Usuario:Juan Carlos </p>
+                                    <p class="card-text ">Usuario: Juan Carlos </p>
                                         <p class="card-text">Modelo de Vehiculo: mid-size</p>
                                         <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha:05/07/21 01:23am Destino</p>
+                                        <p class="card-text ">Fecha: 05/07/21 01:23am </p>
+                                        <p class="card-text ">Destino: UTP</p>
                                         <p class="card-text">Numero de pasajeros: 4</p>
                                     </div>    
                                     <div class="col-auto">
@@ -172,10 +176,11 @@
 
                                     <div class="col mr-2">     
                                     <h5></h5>    
-                                        <p class="card-text ">Usuario:Juan Carlos </p>
+                                    <p class="card-text ">Usuario: Juan Carlos </p>
                                         <p class="card-text">Modelo de Vehiculo: mid-size</p>
                                         <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha:05/07/21 01:23am Destino</p>
+                                        <p class="card-text ">Fecha: 05/07/21 01:23am </p>
+                                        <p class="card-text ">Destino: UTP</p>
                                         <p class="card-text">Numero de pasajeros: 4</p>
                                     </div>    
                                     <div class="col-auto">
@@ -201,10 +206,11 @@
 
                                     <div class="col mr-2">     
                                     <h5></h5>    
-                                        <p class="card-text ">Usuario:Juan Carlos </p>
+                                        <p class="card-text ">Usuario: Juan Carlos </p>
                                         <p class="card-text">Modelo de Vehiculo: mid-size</p>
                                         <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha:05/07/21 01:23am Destino</p>
+                                        <p class="card-text ">Fecha:05/0 7/21 01:23am </p>
+                                        <p class="card-text ">Destino: UTP</p>
                                         <p class="card-text">Numero de pasajeros: 4</p>
                                     </div>    
                                     <div class="col-auto">
@@ -230,10 +236,11 @@
 
                                     <div class="col mr-2">     
                                     <h5></h5>    
-                                        <p class="card-text ">Usuario:Juan Carlos </p>
+                                        <p class="card-text ">Usuario: Juan Carlos </p>
                                         <p class="card-text">Modelo de Vehiculo: mid-size</p>
                                         <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha:05/07/21 01:23am Destino</p>
+                                        <p class="card-text ">Fecha:05/0 7/21 01:23am </p>
+                                        <p class="card-text ">Destino: UTP</p>
                                         <p class="card-text">Numero de pasajeros: 4</p>
                                     </div>    
                                     <div class="col-auto">
