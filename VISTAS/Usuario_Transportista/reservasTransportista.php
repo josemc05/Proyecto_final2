@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>General</title>
+    <title>Viajes</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
         <ul class="navbar-nav bg-gradient-primary2 sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelRegular.php"> <!--PHP-->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelTranspor.php"> <!--PHP-->
                 <div class="sidebar-brand-icon ">
                     <img src="../../IMG/logoUTPwhite.png" width="65" height="65"></img>
                 </div>
@@ -54,7 +54,7 @@
                     <span>Estado</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reservasTransportista.php"> <!--PHP-->
+                <a class="nav-link" href="#"> <!--PHP-->
                     <i class="far fa-list-alt"></i>
                     <span>Viajes</span></a>
             </li>
@@ -77,7 +77,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Panel del Transportista</h2>
+                    <h2>Viajes Actuales</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -119,68 +119,38 @@
 
                     <!-- INICIO DE BARRA -->         
                     <hr>
-                    <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">  
-                                    
-                                    
-                                    <img style="height: 13%;width: 13%; padding: 1%; margin: 1%;" class="tamaño" src="../../IMG/carroUtp.jfif">
-                                    
-
-                                    <div class="col mr-2">        
-                                    <h5>Manuel Campos</h5>
-                                    <h5>Cedula: 5-754-2145</h5>
-                                    <h5>Telefono: 6524-5425</h5>
-                                    <h5>Email: manuelFacheritoUtp@utp.ac.pa</h5>
-                                    <h5>Matricula:395741</h5>
-                                    <h5>Estado del Vehiculo: Disponible</h5>      
-                                        <!--<p class="card-text ">Matricula: M-111-1111 </p>-->
-                                        <!--<p class="card-text ">Capacidad: 5 personas</p>-->
-                                    </div>    
-                                    <div class="col-auto">
-                                    <!--<a type="button" class="btn btn-danger float-right ml-2">Cancelar reserva</a>-->   
-                                    <a type="button" href="reporteEstado.php" class="btn btn-info float-right ">Editar</a>
-                                        
-                                    </div>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Fecha: Jueves 15 de junio 2021</p>
+                            <p class="card-text">Hora: 6:00 Am / 4:00 Pm</p>
+                            <p class="card-text">Destino: Los Santos</p>
+                            <p class="card-text">Numero de Pasajeros: 4</p>
+                            <p class="card-text">A nombre de: Julia Margarita</p>
+                        </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                            <p class="card-text">Fecha: Lunes 22 de junio 2021</p>
+                            <p class="card-text">Hora: 10:00 Am / 6:00 Pm</p>
+                            <p class="card-text">Destino: Colón</p>
+                            <p class="card-text">Numero de Pasajeros: 25</p>
+                            <p class="card-text">A nombre de: Martin Roma</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                        <!-- INICIO DE BARRA -->
-                        <hr>
-                    <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">  
-                                    
-                                    
-                                    <img style="height: 13%;width: 13%; padding: 1%; margin: 1%;" class="tamaño" src="../../IMG/busUtp.jpg">
-                                    
-
-                                    <div class="col mr-2">        
-                                    <h5>Manuel Campos</h5>
-                                    <h5>Cedula: 5-754-2145</h5>
-                                    <h5>Telefono: 6524-5425</h5>
-                                    <h5>Email: manuelFacheritoUtp@utp.ac.pa</h5>
-                                    <h5>Matricula: 523830</h5>
-                                    <h5>Estado del Vehiculo: Mantenimiento</h5>      
-                                        <!--<p class="card-text ">Matricula: M-111-1111 </p>-->
-                                        <!--<p class="card-text ">Capacidad: 5 personas</p>-->
-                                    </div>    
-                                    <div class="col-auto">
-                                    <!--<a type="button" class="btn btn-danger float-right ml-2">Cancelar reserva</a>-->   
-                                    <a type="button" href="reporteEstado.php" class="btn btn-info float-right ">Editar</a>
-                                        
-                                    </div>
+                            <div class="card">
+                                <div class="card-body">
+                            <p class="card-text">Fecha: Viernes 1 de Julio 2021</p>
+                            <p class="card-text">Hora: 12:00 Pm / 5:30 Pm</p>
+                            <p class="card-text">Destino: Tocumen</p>
+                            <p class="card-text">Numero de Pasajeros: 15</p>
+                            <p class="card-text">A nombre de: Omar Chang</p>
                                 </div>
                             </div>
+                            </div>
+                                <hr>
+                                </div> 
                         </div>
-                    </div>
-                    <hr>
-                    </div> </div>
                     
                     <!-- FINAL DE BARRA -->
                       
