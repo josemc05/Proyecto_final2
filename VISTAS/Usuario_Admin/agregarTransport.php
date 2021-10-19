@@ -129,7 +129,7 @@
                 <!-- Begin Page Content -->
                 <div class="container">
 
-<!-- SECCIONES PEGAR AQUI -->
+            <!-- SECCIONES PEGAR AQUI -->
                 <div class="row">
                     <div class="col-8 mx-auto">
                     <div class="col">
@@ -170,7 +170,7 @@
                                             id="exampleRepeatPassword" placeholder="Placa del Vehiculo">
                                     </div>
                                 </div>
-                                <a href="panelAdmin.php" class="btn btn-primary btn-user btn-block">
+                                <a type="submit"href="panelAdmin.php" class="btn btn-primary btn-user btn-block">
                                     Registrar
                                 </a>
                                 
