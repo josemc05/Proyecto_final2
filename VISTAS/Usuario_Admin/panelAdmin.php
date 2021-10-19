@@ -54,8 +54,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Revision de Peticiones</a>
-                        <a class="collapse-item" href="cards.html">Agregar Peticion</a>
+                        <a class="collapse-item" href="revisarpeticion.php">Revision de Peticiones</a>
+                        <a class="collapse-item" href="agregarpeticion.php">Agregar Peticion</a>
                     </div>
                 </div>
             </li>
