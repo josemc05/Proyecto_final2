@@ -32,7 +32,7 @@
         <ul class="navbar-nav bg-gradient-primary2 sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelRegular.html"> <!--PHP-->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelRegular.php"> <!--PHP-->
                 <div class="sidebar-brand-icon ">
                     <img src="../../IMG/logoUTPwhite.png" width="65" height="65"></img>
                 </div>
@@ -49,17 +49,17 @@
             <!-- Nav Item - Dashboard -->
             
             <li class="nav-item">
-                <a class="nav-link" href="reservasActuales.html"> <!--PHP-->
+                <a class="nav-link" href="reservasActuales.php"> <!--PHP-->
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Reservas actuales</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reservarFlota.html"> <!--PHP-->
+                <a class="nav-link" href="reservarFlota.php"> <!--PHP-->
                     <i class="fas fa-clipboard-list"></i>
                     <span>Reservar flota vehicular</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reservaEspecial.html"> <!--PHP-->
+                <a class="nav-link" href="reservaEspecial.php"> <!--PHP-->
                     <i class="fas fa-clipboard-list"></i>
                     <span>Reservar Caso especial</span></a>
             </li>
@@ -168,7 +168,7 @@
                                                             placeholder="Cantidad de personas">
                                                     </div>
                                                     
-                                                    <a href="panelRegular.html" class="btn btn-primary btn-user btn-block">
+                                                    <a href="panelRegular.php" class="btn btn-primary btn-user btn-block">
                                                         Solicitar flota vehicular
                                                     </a>
                                                     
@@ -242,7 +242,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="../../index.html">Logout</a> <!--PHP-->
+                    <a class="btn btn-primary" href="../../index.php">Logout</a> <!--PHP-->
                 </div>
             </div>
         </div>
