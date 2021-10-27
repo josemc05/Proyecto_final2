@@ -60,7 +60,6 @@
                 </div>
             
             </li>
-            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -75,6 +74,7 @@
                     </div>
                 </div>
             </li>
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -132,85 +132,88 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container">
 
-                    <!-- INICIO DE BARRA -->
-                    <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
-                                    <div class="col mr-2">        
-                                    <h5>Juan Armando Montevideo</h5>    
-                                        <p class="card-text ">Cedula:8-2096-5222 </p>
-                                        <p class="card-text">Telefono: 6205-5585</p>
-                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
-                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
-                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
-                                        
+            <!-- SECCIONES PEGAR AQUI -->
+                <div class="row">
+                    <div class="col-8 mx-auto">
+                    <div class="col">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Agregar Administrador</h1>
+                            </div>
+                            <form class="col">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="Nombre">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Apellido">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                        <!-- INICIO DE BARRA -->
-                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
-                                    <div class="col mr-2">        
-                                    <h5>Juan Armando Montevideo</h5>    
-                                        <p class="card-text ">Cedula:8-2096-5222 </p>
-                                        <p class="card-text">Telefono: 6205-5585</p>
-                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
-                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
-                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
-                                        
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Cedula">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Correo Electronico">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Contraseña">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Confirmar contraseña">
                                     </div>
                                 </div>
-                            </div>
+                                <a type="submit"href="panelAdmin.php" class="btn btn-primary btn-user btn-block">
+                                    Registrar
+                                </a>
+                                
+                            </form>
+                            
+                        </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        
+                        <!-- Earnings (Monthly) Card Example -->
+                        
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        
+
+                        <!-- Pending Requests Card Example -->
+                        
                         </div>
                     </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                        <!-- INICIO DE BARRA -->
-                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
-                                    <div class="col mr-2">        
-                                    <h5>Juan Armando Montevideo</h5>    
-                                        <p class="card-text ">Cedula:8-2096-5222 </p>
-                                        <p class="card-text">Telefono: 6205-5585</p>
-                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
-                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
-                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
+                    
+                    <!-- Content Row -->
+
+
+                        <!-- Area Chart -->
+                        
+                    <!-- Content Row -->
+                  
+
+                        <!-- Content Column -->
                       
                     <!--IMPORTANTE DEL FOOTER /.container-fluid -->
-               
+                </div>
                 <!-- /.container-fluid -->
 
+            </div>
             <!-- End of Main Content -->
-            </div>
-            </div>
+
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -243,7 +246,7 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Presione cerrar sesion si esta seguro de salir de la sesion</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="../../index.php">Logout</a>

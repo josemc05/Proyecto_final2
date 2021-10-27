@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary2 sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelAdmin.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center"href="revisarpeticion.php">
                 <div class="sidebar-brand-icon ">
                     <img src="../../IMG/logoUTPwhite.png" width="65" height="65"></img>
                 </div>
@@ -55,24 +55,25 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="revisarpeticion.php">Revision de Peticiones</a>
-                        <a class="collapse-item" href="agregarpeticion.php">Agregar Peticion</a>
+                        <a class="collapse-item" href="ReservaFlota_adm.php">Agregar Peticion</a>
                     </div>
                 </div>
+            
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="usuarios.php">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="far fa-user"></i>
-                    <span>Administrar Usuarios</span></a>
-            <li class="nav-item">
-                <a class="nav-link" href="agregarTransport.php">
-                    <i class="fas fa-user-plus"></i>
-                    <span>Agregar Transportista</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="adminNomina.php">
-                    <i class="fas fa-users"></i>
-                    <span>Nomina</span></a>
+                    <span>Administrar Usuarios</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="adminNomina.php">Nomina de Transportistas</a>
+                        <a class="collapse-item" href="agregarTransport.php">Agregar Transportista</a>
+                        <a class="collapse-item" href="agregarAdm.php">Agregar Admin</a>
+                    </div>
+                </div>
             </li>
 
 
@@ -141,7 +142,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png"" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -168,7 +169,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -195,7 +196,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -222,7 +223,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -253,7 +254,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -280,7 +281,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -307,7 +308,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -334,7 +335,7 @@
                             <article class="media-left">
                                 <div class="media-middle">
                                 <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
+                                    <img class=" is-rounded" src="../../IMG/user.png" alt="Image">
                                 </figure>
                                 <br>
                                 </div>
@@ -355,7 +356,7 @@
                         </div>
                         <!--End Fourth column-->
                     </div>
-                </div>
+                </div></br>
 
 
 
@@ -387,19 +388,19 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
+v class="modal-content">
+                
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <di<div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Desea cerrar sesion??</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Presiona "cerrar sesion" para salir de la sesion actual.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="../../index.php">Logout</a>

@@ -42,7 +42,7 @@
                         <figure class="avatar">
                             <img class="tamaño" src="IMG/user.png">
                         </figure>
-                        <form>
+                        <form action="VISTAS/Usuario_Regular/reservasActuales.php"  method="post"  id="registro" name="registro">
                             <div class="field">
                                 <div class="control">
                                     <input class="input is-large" type="email" placeholder="Usuario" autofocus="">

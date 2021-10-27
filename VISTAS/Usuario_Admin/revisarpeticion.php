@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary2 sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelAdmin.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="revisarpeticion.php">
                 <div class="sidebar-brand-icon ">
                     <img src="../../IMG/logoUTPwhite.png" width="65" height="65"></img>
                 </div>
@@ -55,24 +55,25 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="revisarpeticion.php">Revision de Peticiones</a>
-                        <a class="collapse-item" href="agregarpeticion.php">Agregar Peticion</a>
+                        <a class="collapse-item" href="ReservaFlota_adm.php">Agregar Peticion</a>
                     </div>
                 </div>
+            
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="usuarios.php">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="far fa-user"></i>
-                    <span>Administrar Usuarios</span></a>
-            <li class="nav-item">
-                <a class="nav-link" href="agregarTransport.php">
-                    <i class="fas fa-user-plus"></i>
-                    <span>Agregar Transportista</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="adminNomina.php">
-                    <i class="fas fa-users"></i>
-                    <span>Nomina</span></a>
+                    <span>Administrar Usuarios</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="adminNomina.php">Nomina de Transportistas</a>
+                        <a class="collapse-item" href="agregarTransport.php">Agregar Transportista</a>
+                        <a class="collapse-item" href="agregarAdm.php">Agregar Admin</a>
+                    </div>
+                </div>
             </li>
 
 

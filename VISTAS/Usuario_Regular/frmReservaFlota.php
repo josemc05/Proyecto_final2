@@ -153,12 +153,29 @@
                                                         <input type="text" class="form-control form-control-user" id="exampleInputEmail"
                                                             placeholder="Destino">
                                                     </div>
+                                                    <!--  Hora y fecha de Inicio del viaje-->
                                                     <div class="form-group row">
                                                         <div class="col-sm-6 mb-3 mb-sm-0">
+                                                        <label>Fecha de inicio del viaje</label>
                                                             <input type="date" class="form-control form-control-user" id="exampleFirstName"
                                                                 placeholder="Fecha">
                                                         </div>
                                                         <div class="col-sm-6">
+                                                        <label>Hora de inicio del viaje</label>
+                                                            <input type="time" class="form-control form-control-user" id="exampleLastName"
+                                                                placeholder="hora">
+                                                        </div>
+                                                    </div>
+                                                    <!--  Hora y fecha de Final del viaje-->
+                                                    <div class="form-group row">
+
+                                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                                           <label>Fecha de final del viaje</label>
+                                                            <input type="date" class="form-control form-control-user" id="exampleFirstName"
+                                                                placeholder="Fecha">
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                        <label>Hora de final del viaje</label>
                                                             <input type="time" class="form-control form-control-user" id="exampleLastName"
                                                                 placeholder="hora">
                                                         </div>
@@ -167,7 +184,10 @@
                                                         <input type="number"  min="1" max="100" class="form-control form-control-user" id="exampleInputEmail"
                                                             placeholder="Cantidad de personas">
                                                     </div>
-                                                    
+                                                    <div class="form-group">
+                                                    <label>Descripcion del viaje</label>
+                                                    <textarea maxlenght="500" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    </div>
                                                     <a href="panelRegular.php" class="btn btn-primary btn-user btn-block">
                                                         Solicitar flota vehicular
                                                     </a>
