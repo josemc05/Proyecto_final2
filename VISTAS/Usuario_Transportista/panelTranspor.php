@@ -32,7 +32,7 @@
         <ul class="navbar-nav bg-gradient-primary2 sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelRegular.php"> <!--PHP-->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelTranspor.php"> <!--PHP-->
                 <div class="sidebar-brand-icon ">
                     <img src="../../IMG/logoUTPwhite.png" width="65" height="65"></img>
                 </div>
