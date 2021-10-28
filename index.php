@@ -21,8 +21,8 @@
         <section class="navega">
               <nav>
                 
-                  <img class="utp" src="IMG/att.png" alt="">
-                  <img class="att" src="IMG/logo_utp.png" alt="">
+                  <img class="utp" src="IMG/logo_utp.png" alt="">
+                  <img class="att" src="IMG/att.png" alt="">
                   <h1 style="text-align: center; color: rgb(255, 255, 255); font-size:250%; margin-top: 0.5%; " >ATT Reservas de transporte</h1>
                 
               </nav>
