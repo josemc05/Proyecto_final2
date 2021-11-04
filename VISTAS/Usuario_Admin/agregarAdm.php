@@ -1,3 +1,10 @@
+<?php
+include("../../PHP/verificar.php");
+include("../../PHP/consultarUser.php");
+if($datoUsuario->nivel!=1){
+    header("Location: ../index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
