@@ -71,12 +71,7 @@
                             </div>
                             
                             <!-- Campo Nombre usuario-->
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Nombre de Usuario" required>
-                                </div>
-                            </div>
-                            
+                        
                             <!-- Campo Tipo de usuario
                             <div class="field">
                                 <div class="control">
