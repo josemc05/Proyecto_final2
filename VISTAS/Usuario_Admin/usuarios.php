@@ -1,9 +1,11 @@
 <?php
+/*
 include("../../PHP/verificar.php");
 include("../../PHP/consultarUser.php");
 if($datoUsuario->nivel!=1){
     include("../../PHP/salir.php");
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,9 +1,11 @@
 <?php
+/*
 include("../../PHP/verificar.php");
 include("../../PHP/consultarUser.php");
 if($datoUsuario->nivel!=1){
     include("../../PHP/salir.php");
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -149,43 +151,42 @@ if($datoUsuario->nivel!=1){
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Agregar Administrador</h1>
                             </div>
-                            <form class="col">
+                            <form class="col" action="../../PHP/guardarAdm.php" method="post" id ="registro"  name="registro"  >
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="Nombre">
+                                        <input type="text" class="form-control form-control-user" name="nombre" id="exampleFirstName"
+                                            placeholder="Nombre" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Apellido">
+                                        <input type="text" class="form-control form-control-user" name="apellido" id="exampleLastName"
+                                            placeholder="Apellido" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Cedula">
+                                    <input type="text" class="form-control form-control-user" name="cedula" id="exampleInputEmail"
+                                        placeholder="Cedula" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}">
+                                    <input type="tel" class="form-control form-control-user" name="telefono" id="exampleInputEmail"
+                                        placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Correo Electronico">
+                                    <input type="email" class="form-control form-control-user" name="email" id="exampleInputEmail"
+                                        placeholder="Correo Electronico" required>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Contraseña">
+                                            id="pass" placeholder="Contraseña" name="password" required>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Confirmar contraseña">
+                                        id="pass2"  placeholder="Confirmar contraseña" required>
                                     </div>
                                 </div>
-                                <a type="submit"href="panelAdmin.php" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-primary btn-user btn-block" >
                                     Registrar
-                                </a>
-                                
+</button>              
                             </form>
                             
                         </div>
@@ -265,6 +266,7 @@ if($datoUsuario->nivel!=1){
     <!-- Bootstrap core JavaScript-->
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../JS/eventos.js"> </script>
 
     <!-- Core plugin JavaScript-->
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>

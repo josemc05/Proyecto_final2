@@ -1,9 +1,11 @@
 <?php
+/*
 include("../../PHP/verificar.php");
 include("../../PHP/consultarUser.php");
 if($datoUsuario->nivel!=1){
     include("../../PHP/salir.php");
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -148,42 +150,42 @@ if($datoUsuario->nivel!=1){
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Agregar Transportista</h1>
                             </div>
-                            <form class="col">
+                            <form class="col" action="../../PHP/guardarTransportista.php" method="post" id ="registro"  name="registro">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="Nombre">
+                                            placeholder="Nombre" name="nombre" required>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Apellido">
+                                            placeholder="Apellido" name="apellido" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Cedula">
+                                        placeholder="Cedula" name="cedula" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="tel" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}">
+                                        placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}" name="telefono" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Correo Electronico">
+                                        placeholder="Correo Electronico" name="email" required>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Contraseña">
+                                            id="pass" placeholder="Contraseña" name="password" required>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Confirmar contraseña">
+                                            id="pass2" placeholder="Confirmar contraseña">
                                     </div>
                                 </div>
-                                <a type="submit"href="panelAdmin.php" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Registrar
-                                </a>
+</button>
                                 
                             </form>
                             
@@ -270,6 +272,7 @@ if($datoUsuario->nivel!=1){
 
     <!-- Custom scripts for all pages-->
     <script src="../../js/sb-admin-2.min.js"></script>
+    <script src="../../js/eventos.js"></script>
 
     <!-- Page level plugins -->
     <script src="../../vendor/chart.js/Chart.min.js"></script>
