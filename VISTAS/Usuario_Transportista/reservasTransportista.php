@@ -1,3 +1,6 @@
+<?php
+include("../../PHP/metodosTranspor.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,41 +119,20 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+               
+                <?php echo desplegarReservas($mbd);
+                    ?>
+                
                     <!-- INICIO DE BARRA -->         
-                    <hr>
-                <div class="card-deck">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-text">Fecha: Jueves 15 de junio 2021</p>
-                            <p class="card-text">Hora: 6:00 Am / 4:00 Pm</p>
-                            <p class="card-text">Destino: Los Santos</p>
-                            <p class="card-text">Numero de Pasajeros: 4</p>
-                            <p class="card-text">A nombre de: Julia Margarita</p>
-                        </div>
+                   
+                <!-- FINAL DE LA FILA -->   
+                         
+                
+                </div> 
+                        
+                        
+                        <!-- FIN DE CONTAINER --> 
                             </div>
-                            <div class="card">
-                                <div class="card-body">
-                            <p class="card-text">Fecha: Lunes 22 de junio 2021</p>
-                            <p class="card-text">Hora: 10:00 Am / 6:00 Pm</p>
-                            <p class="card-text">Destino: Colón</p>
-                            <p class="card-text">Numero de Pasajeros: 25</p>
-                            <p class="card-text">A nombre de: Martin Roma</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                            <p class="card-text">Fecha: Viernes 1 de Julio 2021</p>
-                            <p class="card-text">Hora: 12:00 Pm / 5:30 Pm</p>
-                            <p class="card-text">Destino: Tocumen</p>
-                            <p class="card-text">Numero de Pasajeros: 15</p>
-                            <p class="card-text">A nombre de: Omar Chang</p>
-                                </div>
-                            </div>
-                            </div>
-                                <hr>
-                                </div> 
-                        </div>
                     
                     <!-- FINAL DE BARRA -->
                       
@@ -200,8 +182,11 @@
         </div>
     </div>
 
+    <!-- MODAL DE ACTUALIZAR KILOMETRAJE-->
+
     <!-- Bootstrap core JavaScript-->
     <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../JS/eventos.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->

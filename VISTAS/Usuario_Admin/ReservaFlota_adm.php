@@ -1,4 +1,5 @@
 <?php
+include("../../PHP/conexion.php");
 /*
 include("../../PHP/verificar.php");
 include("../../PHP/consultarUser.php");
@@ -6,6 +7,14 @@ if($datoUsuario->nivel!=1){
     include("../../PHP/salir.php");
 }
 */
+function desplegarCedula($mbd){
+    $output='';
+    $cedulaRegulares=$mbd->query("SELECT cedula_user FROM usuarios WHERE tipo_user=3");
+    while($consultaCedula=$cedulaRegulares->fetch(PDO::FETCH_OBJ)) {
+       $output.='<option name="nivel" value="'.$consultaCedula->cedula_user.'">'.$consultaCedula->cedula_user.'</option>';
+        }
+    return $output;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +34,7 @@ if($datoUsuario->nivel!=1){
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Custom styles for this template-->
     <link href="../../CSS/sb-admin-2.css" rel="stylesheet">
     <link href="../../CSS/maquillaje.css" rel="stylesheet">
@@ -172,57 +181,47 @@ if($datoUsuario->nivel!=1){
                                                 <div class="text-center">
                                                     <h1 class="h4 text-gray-900 mb-4" style="font-size: 15px;">Llene el siguiente formulario de solicitud de vehiculo</h1>
                                                 </div>
-                                                <form class="col">
+                                                <form class="col" action="../../PHP/reservaAdm.php" method="post" id ="registro"  name="registro">
                                                 <!--  Cedula del solicitante-->    
                                                         <div class="form-group">
-                                                        <input type="text" class="form-control form-control-user" 
-                                                            placeholder="Cedula del Solicitante">
+                                                            <select class="form-select" name="cedula" id="cedula" required>
+                                                                <option selected>Seleccione la Cedula del Solicitante</option>
+                                                                <?php echo desplegarCedula($mbd); 
+                                                                ?> 
+                                                            </select>
                                                             </div>    
                                                          <!-- Destino del viaje-->     
                                                             <div class="form-group">
                                                         <input type="text" class="form-control form-control-user" 
-                                                            placeholder="Destino">
+                                                            placeholder="Destino" name="destino" id="destino" required>
                                                             </div>
                                                     <!--  Hora y fecha de Inicio del viaje-->
-                                                    <div class="form-group row">
-                                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <label>Fecha de inicio del viaje</label>
-                                                            <input type="date" class="form-control form-control-user" id="exampleFirstName"
-                                                                placeholder="Fecha">
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                        <label>Hora de inicio del viaje</label>
-                                                            <input type="time" class="form-control form-control-user" id="exampleLastName"
-                                                                placeholder="hora">
-                                                        </div>
+                                                    <div class="form-group">
+                                                    
+                                                        <label>Fecha y Hora de inicio del viaje</label>
+                                                            <input type="datetime-local" class="form-control form-control-user" id="fechaIn"
+                                                                placeholder="Fecha" name="fechaIn" id="fechaIn" required>
                                                     </div>
                                                     <!--  Hora y fecha de Final del viaje-->
-                                                    <div class="form-group row">
-
-                                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                                           <label>Fecha de final del viaje</label>
-                                                            <input type="date" class="form-control form-control-user" id="exampleFirstName"
-                                                                placeholder="Fecha">
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                        <label>Hora de final del viaje</label>
-                                                            <input type="time" class="form-control form-control-user" id="exampleLastName"
-                                                                placeholder="hora">
-                                                        </div>
+                                                    <div class="form-group">
+                                                    
+                                                        <label>Fecha y Hora de fin del viaje</label>
+                                                            <input type="datetime-local" class="form-control form-control-user" id="fechaFin"
+                                                                placeholder="Fecha" name="fechaFin" id="fechaFin" required>
                                                     </div>
                                                     <!--  Cantidad de personas-->
                                                     <div class="form-group">
                                                         <input type="number"  min="1" max="100" class="form-control form-control-user" id="exampleInputEmail"
-                                                            placeholder="Cantidad de personas">
+                                                            placeholder="Cantidad de personas" name="pasajeros" id="pasajeros" required>
                                                     </div>
                                                     <!--  Descripcion del viaje-->
                                                     <div class="form-group">
                                                     <label>Descripcion del viaje</label>
-                                                    <textarea maxlenght="500" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <textarea maxlenght="500" class="form-control" id="exampleFormControlTextarea1" rows="3" name="descrip" id="descrip" required></textarea>
                                                     </div>
-                                                    <a href="panelRegular.php" class="btn btn-primary btn-user btn-block">
+                                                    <button type="submit" class="btn btn-primary btn-user btn-block">
                                                         Solicitar flota vehicular
-                                                    </a>
+                                                </buttton>
                                                     
                                                 </form>
                                                 
