@@ -1,3 +1,6 @@
+<?php
+include("../../PHP/reservasRegular.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,87 +142,11 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">  
-                                    
-                                    
-                                    <img style="height: 13%;width: 13%; padding: 1%; margin: 1%;" class="tamaño" src="../../IMG/v1.png">
-                                    
-
-                                    <div class="col mr-2">        
-                                    <h5>Modelo vehiculo 1</h5>    
-                                        <p class="card-text ">Matricula: M-111-1111 </p>
-                                        <p class="card-text">Fecha: 1 / 1 / 2021</p>
-                                        <p class="card-text ">Hora: 01:00 PM</p>
-                                        <p class="card-text ">Destino: Panamá</p>
-                                        <p class="card-text">Cantidad de pasajeros: 5</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2" data-toggle="modal" data-target="#logoutModal2">Cancelar reserva</a>    
-                                    <!--<a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>-->
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
+                   
+                
                         <!-- INICIO DE BARRA -->
-                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">   
-                                    
-                                    <img style="height: 13%;width: 13%; padding: 1%; margin: 1%;" class="tamaño" src="../../IMG/v2.png">
-
-                                    <div class="col mr-2">        
-                                    <h5>Modelo vehiculo 2</h5>    
-                                        <p class="card-text ">Matricula: M-111-1111 </p>
-                                        <p class="card-text">Fecha: 1 / 1 / 2021</p>
-                                        <p class="card-text ">Hora: 01:00 PM</p>
-                                        <p class="card-text ">Destino: Panamá</p>
-                                        <p class="card-text">Cantidad de pasajeros: 5</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2" data-toggle="modal" data-target="#logoutModal2">Cancelar reserva</a>    
-                                    <!--<a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>-->
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                        <!-- INICIO DE BARRA -->
-                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">  
-                                    
-                                    <img style="height: 13%;width: 13%; padding: 1%; margin: 1%;" class="tamaño" src="../../IMG/v3.png">
-
-                                    <div class="col mr-2">        
-                                        <h5>Modelo vehiculo 3</h5>    
-                                        <p class="card-text ">Matricula: M-111-1111 </p>
-                                        <p class="card-text">Fecha: 1 / 1 / 2021</p>
-                                        <p class="card-text ">Hora: 01:00 PM</p>
-                                        <p class="card-text ">Destino: Panamá</p>
-                                        <p class="card-text">Cantidad de pasajeros: 50</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2" data-toggle="modal" data-target="#logoutModal2">Cancelar reserva</a>    
-                                    <!--<a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>-->
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
+                        <?php echo desplegarReservas($mbd);
+                    ?>
                     <!-- FINAL DE BARRA -->
                       
                     <!--IMPORTANTE DEL FOOTER /.container-fluid -->

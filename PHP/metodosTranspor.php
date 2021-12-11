@@ -28,11 +28,11 @@ while($consultaViajes=$todosViajes->fetch(PDO::FETCH_OBJ)) {
         $output.='<input type="hidden" name="placa" value='.$placa.'>';
         $output.='<p class="card-text">Kilometros Actuales del vehiculo: '.$consultaViajes->km_actuales.'km</p>';
         $output.='</br><input type="text" class="form-control form-control-user" placeholder="Kilometros Nuevos del vehiculo" id="km" name="km" required>';
-        $output.='</br><button type="submit" name="boton" class="btn btn-danger" value='.$consultaViajes->estado_reserva.'>Finalizar Viaje</button>';
+        $output.='</br><button type="submit" name="boton" class="btn btn-danger confirmation" value='.$consultaViajes->estado_reserva.'>Finalizar Viaje</button>';
         
     }
     else{
-        $output.='</br><button type="submit" name="boton" class="btn btn-info" value='.$consultaViajes->estado_reserva.'>Iniciar Viaje</button>';
+        $output.='</br><button type="submit" name="boton" class="btn btn-info " value='.$consultaViajes->estado_reserva.'>Iniciar Viaje</button>';
         
     }
     $output.="</form>";
@@ -61,7 +61,7 @@ else if($contador>=3){
         $output.='<input type="hidden" name="placa" value='.$placa.'>';
         $output.='<p class="card-text">Kilometros Actuales del vehiculo: '.$consultaViajes->km_actuales.'km</p>';
         $output.='</br><input type="text" class="form-control form-control-user" placeholder="Kilometros Nuevos del vehiculo" id="km" name="km" required>';
-        $output.='</br><button type="submit" name="boton" class="btn btn-danger" value='.$consultaViajes->estado_reserva.'>Finalizar Viaje</button>';
+        $output.='</br><button type="submit" name="boton" class="btn btn-danger confirmation" value='.$consultaViajes->estado_reserva.'>Finalizar Viaje</button>';
     }
     else{
         $output.='</br><button type="submit" name="boton" class="btn btn-info" value='.$consultaViajes->estado_reserva.'>Iniciar Viaje</button>';
