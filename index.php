@@ -42,17 +42,24 @@
                         <figure class="avatar">
                             <img class="tamaño" src="IMG/user.png">
                         </figure>
-                        <form action="VISTAS/Usuario_Regular/reservasActuales.php"  method="post"  id="registro" name="registro">
+                        <form action="PHP/procesarLogin.php"  method="post"  id="inicio" name="inicio">
+
+                        <p style="color:red"> <?php if (isset ($_GET['msg'])) echo $_GET['msg'];?> </p>
+
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Usuario" autofocus="">
+                                    <label for="email">
+                                        <input class="input is-large" id="email" name="email" type="email" placeholder="Correo" autofocus="" required>
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Contraseña">
-                                </div>
+                                    <label for="contraseña">    
+                                        <input class="input is-large" id="contraseña" type="contraseña" name="contraseña" placeholder="Contraseña" required>
+                                        </label>
+                                    </div>
                             </div>
                             <div class="field">
                                 <label class="checkbox">
