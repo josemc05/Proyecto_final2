@@ -1,4 +1,11 @@
 <?php
+    include("../PHP/verificar.php");
+    include("../PHP/consultaUser.php");
+
+    if($datoUser->tipo_user!=1)
+    {
+        include("../PHP/salir.php");
+    }
 /*
 include("../../PHP/verificar.php");
 include("../../PHP/consultarUser.php");
@@ -115,6 +122,8 @@ if($datoUsuario->nivel!=1){
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jose Cuevas</span>
                                 <img class="img-profile rounded-circle"
                                     src="../../img/user.jpg">
