@@ -13,7 +13,6 @@
 
         $consulta->execute();
         $row = $consulta->fetchAll();
-
         if (!$row)
         {
             header("Location: ../index.php?msg=Datos incorrectos para ingresar, intente nuevamente");
@@ -22,11 +21,10 @@
         else
         {
             $tipo = $row[0][1];
+            $cedu = $row[0][0];
             echo "Tiene autorización para acceder";
+            $_SESSION['cedula_user']=$cedu;
             $_SESSION['sw']=true;
-            //$_SESSION['cedula_user']=$row["cedula_user"];
-            $_SESSION['cedula_user']=$row[0][0];
-            echo $_SESSION['cedula_user'];
 
             if ($tipo==1)
             {
