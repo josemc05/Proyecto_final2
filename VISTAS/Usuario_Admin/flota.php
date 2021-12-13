@@ -4,7 +4,8 @@ include("../../PHP/consultarUser.php");
 if($datoUsuario->nivel!=1){
     include("../../PHP/salir.php");
 }
-*/?>
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,15 +18,17 @@ if($datoUsuario->nivel!=1){
     <meta name="author" content="">
 
     <title>Revision de Peticiones</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
     <!-- Custom styles for this template-->
     <link href="../../css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../css/eles.css" rel="stylesheet">
 
 </head>
 
@@ -38,7 +41,7 @@ if($datoUsuario->nivel!=1){
         <ul class="navbar-nav bg-gradient-primary2 sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="panelAdmin.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="revisarpeticion.php">
                 <div class="sidebar-brand-icon ">
                     <img src="../../IMG/logoUTPwhite.png" width="65" height="65"></img>
                 </div>
@@ -46,7 +49,7 @@ if($datoUsuario->nivel!=1){
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider ">
+            <hr class="sidebar-divider " style=" border-top: 1px solid #383838;">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Menú
@@ -62,24 +65,24 @@ if($datoUsuario->nivel!=1){
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="revisarpeticion.php">Revision de Peticiones</a>
-                        <a class="collapse-item" href="agregarpeticion.php">Agregar Peticion</a>
+                        <a class="collapse-item" href="ReservaFlota_adm.php">Agregar Peticion</a>
                     </div>
                 </div>
-            </li>
             
-            <li class="nav-item">
-                <a class="nav-link" href="usuarios.php">
-                    <i class="far fa-user"></i>
-                    <span>Administrar Usuarios</span></a>
-            <li class="nav-item">
-                <a class="nav-link" href="agregarTransport.php">
-                    <i class="fas fa-user-plus"></i>
-                    <span>Agregar Transportista</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="adminNomina.php">
-                    <i class="fas fa-users"></i>
-                    <span>Nomina</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="far fa-user"></i>
+                    <span>Administrar Usuarios</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="adminNomina.php">Nomina de Transportistas</a>
+                        <a class="collapse-item" href="agregarTransport.php">Agregar Transportista</a>
+                        <a class="collapse-item" href="agregarAdm.php">Agregar Admin</a>
+                    </div>
+                </div>
             </li>
 
 
@@ -101,7 +104,7 @@ if($datoUsuario->nivel!=1){
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Revision de Peticiones</h2>
+                    <h2>Reservas de Transporte</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -141,120 +144,57 @@ if($datoUsuario->nivel!=1){
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
-                <div class="columns">
-                    <div class="column">
-                        <!--First column-->
-                        <div class="box">
-                            <article class="media-left">
-                                <div class="media-middle">
-                                <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
-                                </figure>
-                                <br>
-                                </div>
-                                <div class="media-content">
-                                <div class="content">
-                                    <ul >
-                                        <li>Nombre</li>
-                                        <li>Cedula</li>
-                                        <li>Telefono</li>
-                                        <li>Correo</li>
-                                    </ul>
-                                </div>
-                                </div>
-                                    <button class="button is-danger">
-                                    <p>Eliminar</p>
-                                    </button>
-                            </article>
-                        </div>
-                        <!--End First column-->
-                    </div>
-                    <div class="column">
-                        <!--Second column-->
-                        <div class="box">
-                            <article class="media-left">
-                                <div class="media-middle">
-                                <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
-                                </figure>
-                                <br>
-                                </div>
-                                <div class="media-content">
-                                <div class="content">
-                                    <ul >
-                                        <li>Nombre</li>
-                                        <li>Cedula</li>
-                                        <li>Telefono</li>
-                                        <li>Correo</li>
-                                    </ul>
-                                </div>
-                                </div>
-                                    <button class="button is-danger">
-                                    <p>Eliminar</p>
-                                    </button>
-                            </article>
-                        </div>
-                        <!--End Second column-->
-                    </div>
-                    <div class="column">
-                        <!--Third column-->
-                        <div class="box">
-                            <article class="media-left">
-                                <div class="media-middle">
-                                <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
-                                </figure>
-                                <br>
-                                </div>
-                                <div class="media-content">
-                                <div class="content">
-                                    <ul >
-                                        <li>Nombre</li>
-                                        <li>Cedula</li>
-                                        <li>Telefono</li>
-                                        <li>Correo</li>
-                                    </ul>
-                                </div>
-                                </div>
-                                    <button class="button is-danger">
-                                    <p>Eliminar</p>
-                                    </button>
-                            </article>
-                        </div>
-                        <!--End Third column-->
-                    </div>
-                    <div class="column">
-                        <!--Fourth column-->
-                        <div class="box">
-                            <article class="media-left">
-                                <div class="media-middle">
-                                <figure style="display:block; margin:auto;" class="image is-128x128">
-                                    <img class=" is-rounded" src="https://cdn.icon-icons.com/icons2/2367/PNG/512/user_icon_143482.png" alt="Image">
-                                </figure>
-                                <br>
-                                </div>
-                                <div class="media-content">
-                                <div class="content">
-                                    <ul >
-                                        <li>Nombre</li>
-                                        <li>Cedula</li>
-                                        <li>Telefono</li>
-                                        <li>Correo</li>
-                                    </ul>
-                                </div>
-                                </div>
-                                    <button class="button is-danger">
-                                    <p>Eliminar</p>
-                                    </button>
-                            </article>
-                        </div>
-                        <!--End Fourth column-->
-                    </div>
-                </div>
 
+            <table class="table">
+                <tr>
+                <td>Foto </td>
+                <td>Placa</td>
+                <td>Tipo de vehiculo</td>
+                <td>Estado</td>
+                <td>km_actuales</td>
+                <td>km_mantenimiento</td>
             
-            
-            
+                </tr>
+
+                <?php
+
+
+                include("../../configuracion/conexion.php");
+
+
+                $sql = 'SELECT * FROM vehiculos';
+                foreach ($conn->query($sql) as $row) {
+                    ?> 
+                    <tr>
+
+                    <td></td>
+                    <td><?php print $row['placa'] . "\t";?> </td>
+                    <td><?php print $row['tipo_vehi'] . "\t";?> </td>
+                    <td><?php 
+                    if($row['estado_vehi']==2) {
+                    ?> 
+                    &nbsp;&nbsp;<button class="button is-primary">Habilitar</button>
+                    <?php
+                    }
+                    if($row['estado_vehi']==1){
+                    ?> 
+                    &nbsp;&nbsp;<button class="button is-danger" title="Disabled button" disabled>Habilitado</button>
+                    <?php
+                    }
+                    ?> </td>
+                    <td><?php print $row['km_actuales'] . "\t";?> </td>
+                    <td><?php print $row['km_mantenimiento'] . "\n";?> </td>
+                    
+                    </tr>
+                    <?php
+                } 
+
+                ?> 
+
+            </table>
+            <form action="agregarVehiculo.php">
+            <button class="button is-primary">Agregar vehiculo</button>
+            </form>
             </div> <!-- End /.container-fluid -->
             
             </div> <!-- End of Main Content -->
