@@ -20,7 +20,7 @@ $sentencia->bindParam(':password', $password);
 $sentencia->bindParam(':tipo', $nivel);
 $sentencia->bindParam(':foto', $foto);
 $sentencia->execute();
-echo '<meta http-equiv="refresh" content="0; url=../../index.php">';
+echo '<meta http-equiv="refresh" content="0; url=../../VISTAS/Usuario_Admin/agregarAdm.php">';
 }
 catch(PDOException $e){
 if($e->errorInfo[1]==1062){

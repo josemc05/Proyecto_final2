@@ -1,8 +1,8 @@
 <?php  
        
-    define("HOST_NAME", "localhost");
-    define("USER_NAME", "estudiante");
-    define("PASS", "utp2021");
+    define("HOST_NAME", "localhost:3307");
+    define("USER_NAME", "admin");
+    define("PASS", "123456");
     define("DATABASE", "sistema_transporte");
 
 ?>

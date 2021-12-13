@@ -7,7 +7,7 @@
         $email=$_REQUEST['email'];
         $contraseña=md5($_REQUEST['contraseña']);
 
-        $consulta=$conn->query("SELECT cedula_user, tipo_user FROM usuarios WHERE correo_user='$email' and password ='$contraseña'");
+        $consulta=$conn->query("SELECT cedula_user, tipo_user FROM usuarios WHERE correo_user='$email' and password_user ='$contraseña'");
 
         $consulta->setFetchMode(PDO::FETCH_NUM);
 
@@ -30,15 +30,15 @@
 
             if ($tipo==1)
             {
-                header("Location: ../VISTAS/Usuario_Admin/panelAdmin.php");
+                header("Location: ../VISTAS/Usuario_Admin/revisarpeticion.php");
             }
             else if($tipo==2)
             {
-                header("Location: ../VISTAS/Usuario_Transportista/panelTranspor.php");
+                header("Location: ../VISTAS/Usuario_Transportista/reservasTransportista.php");
             }
             else if($tipo==3)
             {
-                header("Location: ../VISTAS/Usuario_Regular/panelRegular.php");
+                header("Location: ../VISTAS/Usuario_Regular/reservasActuales.php");
             }
             exit;
         }
