@@ -169,9 +169,6 @@ if($datoUser->tipo_user!=1){
                 <?php
 
 
-                include("../../configuracion/conexion.php");
-
-
                 $sql = 'SELECT * FROM reservas';
                 foreach ($conn->query($sql) as $row) {
                     ?> 

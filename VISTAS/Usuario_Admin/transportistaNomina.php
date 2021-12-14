@@ -165,9 +165,6 @@ if($datoUser->tipo_user!=1){
                 <?php
 
 
-                include("../../configuracion/conexion.php");
-
-
                 $sql = 'SELECT * FROM usuarios where tipo_user=2';
                 foreach ($conn->query($sql) as $row) {
                     ?> 

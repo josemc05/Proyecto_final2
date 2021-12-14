@@ -166,9 +166,6 @@ if($datoUser->tipo_user!=1){
                 <?php
 
 
-                include("../../configuracion/conexion.php");
-
-
                 $sql = 'SELECT * FROM vehiculos';
                 foreach ($conn->query($sql) as $row) {
                     ?> 
