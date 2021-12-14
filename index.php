@@ -57,7 +57,7 @@
                             <div class="field">
                                 <div class="control">
                                     <label for="contraseña">    
-                                        <input class="input is-large" id="contraseña" type="contraseña" name="contraseña" placeholder="Contraseña" required>
+                                        <input class="input is-large" type="password" id="contraseña" type="contraseña" name="contraseña" placeholder="Contraseña" required>
                                         </label>
                                     </div>
                             </div>
