@@ -177,7 +177,6 @@ if($datoUser->tipo_user!=1){
                     ?> 
                     <tr>
 
-                    <td></td>
                     <td><?php print $row['id_reserva'] . "\t";?> </td>
                     <td><?php print $row['pasajeros'] . "\t";?> </td>
                     <td><?php print $row['destino'] . "\t";?> </td>
@@ -189,14 +188,15 @@ if($datoUser->tipo_user!=1){
                     <td><?php print $row['re_cedula_trans'] . "\n";?> </td>
                     <td> 
 
-                    <form action="aceptarpeticion.php">
-                        
-                    &nbsp;&nbsp;<button class="button is-primary">Aceptar</button>
+                    <form action="../../PHP/aceptarpeticion.php" method="POST">
+                    <input type="hidden" class="form-control form-control-user"  name="id" value="<?php echo $row['id_reserva'];?>">
+                    &nbsp;&nbsp;<button type="submit" class="button is-primary">Aceptar</button>
                         </form>
 
-
-                    <form action="rechazarpeticion.php">
-                          &nbsp;<button class="button is-danger">Rechazar</button>
+                    <br>
+                    <form action="../../PHP/rechazarpeticion.php" method="POST">
+                    <input type="hidden" class="form-control form-control-user"  name="id" value="<?php echo $row['id_reserva'];?>">
+                   &nbsp;&nbsp;<button type="submit" class="button is-danger">Rechazar</button>
                           </form>
 
                     </td>
