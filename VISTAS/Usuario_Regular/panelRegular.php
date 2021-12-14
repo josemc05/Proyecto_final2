@@ -5,7 +5,7 @@ include("../../PHP/conexion.php");
 include("../../PHP/consultaUser.php");
 include("../../PHP/metodosGlobales.php");
 if($datoUser->tipo_user!=3){
-    include("../../PHP/salir.php");
+    include("../../PHP/salir2.php");
 }
 ?>
 <!DOCTYPE html>
