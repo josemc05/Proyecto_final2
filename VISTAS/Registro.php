@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="../CSS/login.css">
     <link rel="stylesheet" type="text/css" href="../CSS/maquillaje.css">
+
+    <script>
+
+    function ComprobarClave()
+    {
+      clave1 = document.registro.pass.value
+      clave2 = document.registro.pass2.value
+    
+      if (clave1 != clave2)
+      {
+        alert ("Las dos contraseñas no son iguales...");
+        return false;
+      }
+    }
+    
+  </script>
+
 </head>
 
 <body>
@@ -24,7 +41,6 @@
                   <img class="utp" src="../IMG/logo_utp.png" alt="">
                   <img class="att" src="../IMG/att.png" alt="">
                   <h1 style="text-align: center; color: rgb(255, 255, 255); font-size:250%; margin-top: 0.5%; " >ATT Reservas de transporte</h1>
-                
               </nav>
           </section>
       </header>
@@ -38,8 +54,14 @@
                     <br><br>
                     <h3 class="title has-text-black">Registro</h3>
                     <div class="box">
-                    <form action="../index.php"  method="post"  id="registro" name="registro">
-                        <fieldset>    
+
+                    <form action="../PHP/procesarRegistro.php"  method="post"  onSubmit="return ComprobarClave()" id="registro" name="registro">
+                    
+                    <p style="color:red"> <?php if (isset ($_GET['msg'])) echo $_GET['msg'];?> </p> <br> 
+                    <br>
+                    <br>
+                    <br>
+                    <fieldset>    
                             <!-- INICIO CARGAR IMAGEN Y PREVISUALIZAR -->
                             <figure class="avatar">
                                 <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
@@ -51,7 +73,7 @@
                             <!-- Campo Nombre-->
                              <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Nombre" autofocus="" required>
+                                    <input name="nombre" id="nombre" class="input is-large" type="text" placeholder="Nombre" autofocus="" required>
                                 </div>
                             </div>
                                
@@ -59,14 +81,14 @@
                             <!-- Campo Apellido-->
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Apellido" required>
+                                    <input name="apellido" id="apellido"class="input is-large" type="text" placeholder="Apellido" required>
                                 </div>
                             </div>
                             
                             <!-- Campo Cedula-->
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Cedula" required>
+                                    <input name="cedula" id="cedula" class="input is-large" type="text" placeholder="Cedula" required>
                                 </div>
                             </div>
                             
@@ -87,26 +109,26 @@
                             <!-- Campo Correo-->
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Correo Electronico" required>
+                                    <input name="email" id="email" class="input is-large" type="email" placeholder="Correo Electronico" required>
                                 </div>
                             </div>
 
                             <!-- Campo Contraseña-->
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" id="pass" type="password" placeholder="Contraseña" required>
+                                    <input class="input is-large" name ="pass" id="pass" type="password" placeholder="Contraseña" required>
                                 </div>
                             </div>
 
                             <!-- Campo Confirmar Contraseña-->
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" id="pass2" type="password" placeholder="Confirmar contraseña" required>
+                                    <input class="input is-large" name ="pass2" id="pass2" type="password" placeholder="Confirmar contraseña" required>
                                 </div>
                             </div>
 
 
-                            <button type="submit" style="background-color: #4B2E83;" class="button is-block is-info is-large is-fullwidth">Registrar<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            <button type="submit" style="background-color: #4B2E83;" class="button is-block is-info is-large is-fullwidth" onclick="ComprobarClave()">Registrar<i class="fa fa-sign-in" aria-hidden="true"></i></button>
                             
                         
                             </fieldset>
@@ -131,3 +153,4 @@
 </body>
 
 </html>
+
