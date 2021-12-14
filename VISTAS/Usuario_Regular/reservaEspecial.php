@@ -58,11 +58,7 @@
                     <i class="fas fa-clipboard-list"></i>
                     <span>Reservar flota vehicular</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="reservaEspecial.php"> <!--PHP-->
-                    <i class="fas fa-clipboard-list"></i>
-                    <span>Reservar Caso especial</span></a>
-            </li>
+           
 
 
         </ul>
