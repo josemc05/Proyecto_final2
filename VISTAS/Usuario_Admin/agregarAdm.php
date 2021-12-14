@@ -20,7 +20,7 @@ if($datoUser->tipo_user!=1){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Agregar admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -79,7 +79,8 @@ if($datoUser->tipo_user!=1){
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="adminNomina.php">Nomina de Transportistas</a>
+                        <a class="collapse-item" href="usuariosNomina.php">Nomina de Usuarios</a>
+                        <a class="collapse-item" href="transportistaNomina.php">Nomina de Transportistas</a>
                         <a class="collapse-item" href="agregarTransport.php">Agregar Transportista</a>
                         <a class="collapse-item" href="agregarAdm.php">Agregar Admin</a>
                     </div>

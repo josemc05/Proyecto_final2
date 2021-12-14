@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 include("../../PHP/verificar.php");
 include("../../PHP/conexion.php");
@@ -8,6 +8,7 @@ if($datoUser->tipo_user!=1){
     include("../../PHP/salir.php");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,8 @@ if($datoUser->tipo_user!=1){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Nomina de transportistas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,6 +31,7 @@ if($datoUser->tipo_user!=1){
 
     <!-- Custom styles for this template-->
     <link href="../../css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../css/eles.css" rel="stylesheet">
 
 </head>
 
@@ -49,7 +52,7 @@ if($datoUser->tipo_user!=1){
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider ">
+            <hr class="sidebar-divider " style=" border-top: 1px solid #383838;">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Menú
@@ -70,7 +73,6 @@ if($datoUser->tipo_user!=1){
                 </div>
             
             </li>
-            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -79,17 +81,17 @@ if($datoUser->tipo_user!=1){
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="adminNomina.php">Nomina de Transportistas</a>
+                        <a class="collapse-item" href="usuariosNomina.php">Nomina de Usuarios</a>
+                        <a class="collapse-item" href="transportistaNomina.php">Nomina de Transportistas</a>
                         <a class="collapse-item" href="agregarTransport.php">Agregar Transportista</a>
                         <a class="collapse-item" href="agregarAdm.php">Agregar Admin</a>
                     </div>
                 </div>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="flota.php"> <!--PHP-->
                     <i class="fas fa-car"></i>
-                    <span>Flota Vehicular</span></a>
+                    <span>Flota vehicular</span></a>
             </li>
 
         </ul>
@@ -110,7 +112,7 @@ if($datoUser->tipo_user!=1){
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Reservas de Transporte</h2>
+                    <h2>Nomina de transportista</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -146,86 +148,50 @@ if($datoUser->tipo_user!=1){
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-                    <!-- INICIO DE BARRA -->
-                    <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
-                                    <div class="col mr-2">        
-                                    <h5>Juan Armando Montevideo</h5>    
-                                        <p class="card-text ">Cedula:8-2096-5222 </p>
-                                        <p class="card-text">Telefono: 6205-5585</p>
-                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
-                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
-                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                        <!-- INICIO DE BARRA -->
-                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
-                                    <div class="col mr-2">        
-                                    <h5>Juan Armando Montevideo</h5>    
-                                        <p class="card-text ">Cedula:8-2096-5222 </p>
-                                        <p class="card-text">Telefono: 6205-5585</p>
-                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
-                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
-                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                        <!-- INICIO DE BARRA -->
-                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
-                                    <div class="col mr-2">        
-                                    <h5>Juan Armando Montevideo</h5>    
-                                        <p class="card-text ">Cedula:8-2096-5222 </p>
-                                        <p class="card-text">Telefono: 6205-5585</p>
-                                        <p class="card-text ">Correo: transportista1@utp.ac.pa</p>
-                                        <p class="card-text">Matricula del Vehiculo: AS2637</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-danger float-right ml-2">Eliminar</a>    
-                                    <a type="button" href="agregarTransport.php" class="btn btn-info float-right ">Editar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                      
-                    <!--IMPORTANTE DEL FOOTER /.container-fluid -->
-               
-                <!-- /.container-fluid -->
 
-            <!-- End of Main Content -->
-            </div>
-            </div>
+            <table class="table">
+                <tr>
+                <td>Cedula </td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Correo</td>
+                <td>foto</td>
+            
+                </tr>
+
+                <?php
+
+
+                include("../../configuracion/conexion.php");
+
+
+                $sql = 'SELECT * FROM usuarios where tipo_user=2';
+                foreach ($conn->query($sql) as $row) {
+                    ?> 
+                    <tr>
+
+                    <td><?php print $row['cedula_user'] . "\t";?> </td>
+                    <td><?php print $row['nombre_user'] . "\t";?> </td>
+                    <td><?php print $row['apellido_user'] . "\t";?> </td>
+                    <td><?php print $row['correo_user'] . "\t";?> </td>
+                    <td><figure class="image is-128x128">
+                        <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/user.png">
+                    </figure> </td>
+                    
+                    </tr>
+                    <?php
+                } 
+
+                ?> 
+
+            </table>
+
+            </div> <!-- End /.container-fluid -->
+            
+            </div> <!-- End of Main Content -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -248,7 +214,8 @@ if($datoUser->tipo_user!=1){
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ <!-- Logout Modal-->
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -266,6 +233,7 @@ if($datoUser->tipo_user!=1){
             </div>
         </div>
     </div>
+
     <!-- Bootstrap core JavaScript-->
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

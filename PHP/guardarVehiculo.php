@@ -1,10 +1,5 @@
 <?php
-try {
-    $mbd = new PDO('mysql:host=localhost:3306;dbname=sistema_transporte', 'estudiante', 'utp2021');
-} catch (PDOException $e) {
-    print "¡Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
+include("conexion.php"); 
 
 
 if(isset ($_POST['placa'])){

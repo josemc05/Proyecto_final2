@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 include("../../PHP/verificar.php");
 include("../../PHP/conexion.php");
@@ -20,7 +20,8 @@ if($datoUser->tipo_user!=1){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agregar Transportista</title>
+    <title>Nomina de Usuarios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -30,6 +31,7 @@ if($datoUser->tipo_user!=1){
 
     <!-- Custom styles for this template-->
     <link href="../../css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../css/eles.css" rel="stylesheet">
 
 </head>
 
@@ -50,7 +52,7 @@ if($datoUser->tipo_user!=1){
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider ">
+            <hr class="sidebar-divider " style=" border-top: 1px solid #383838;">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Menú
@@ -89,8 +91,9 @@ if($datoUser->tipo_user!=1){
             <li class="nav-item">
                 <a class="nav-link" href="flota.php"> <!--PHP-->
                     <i class="fas fa-car"></i>
-                    <span>Flota Vehicular</span></a>
+                    <span>Flota vehicular</span></a>
             </li>
+
         </ul>
         <!-- End of Sidebar -->
 
@@ -109,7 +112,7 @@ if($datoUser->tipo_user!=1){
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Reservas de Transporte</h2>
+                    <h2>Nomina de usuarios</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -145,89 +148,50 @@ if($datoUser->tipo_user!=1){
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-            <!-- SECCIONES PEGAR AQUI -->
-                <div class="row">
-                    <div class="col-8 mx-auto">
-                    <div class="col">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Agregar Transportista</h1>
-                            </div>
-                            <form class="col" action="../../PHP/guardarTransportista.php" method="post" id ="registro"  name="registro">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="Nombre" name="nombre" required>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Apellido" name="apellido" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Cedula" name="cedula" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}" name="telefono" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Correo Electronico" name="email" required>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="pass" placeholder="Contraseña" name="password" required>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="pass2" placeholder="Confirmar contraseña">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    Registrar
-</button>
-                                
-                            </form>
-                            
-                        </div>
-                        </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        
-                        <!-- Earnings (Monthly) Card Example -->
-                        
+            <table class="table">
+                <tr>
+                <td>Cedula </td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Correo</td>
+                <td>foto</td>
+            
+                </tr>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        
+                <?php
 
-                        <!-- Pending Requests Card Example -->
-                        
-                        </div>
-                    </div>
+
+                include("../../configuracion/conexion.php");
+
+
+                $sql = 'SELECT * FROM usuarios where tipo_user=3';
+                foreach ($conn->query($sql) as $row) {
+                    ?> 
+                    <tr>
+
+                    <td><?php print $row['cedula_user'] . "\t";?> </td>
+                    <td><?php print $row['nombre_user'] . "\t";?> </td>
+                    <td><?php print $row['apellido_user'] . "\t";?> </td>
+                    <td><?php print $row['correo_user'] . "\t";?> </td>
+                    <td><figure class="image is-128x128">
+                        <img src="https://aux.iconspalace.com/uploads/141295684.png">
+                    </figure> </td>
                     
-                    <!-- Content Row -->
+                    </tr>
+                    <?php
+                } 
 
+                ?> 
 
-                        <!-- Area Chart -->
-                        
-                    <!-- Content Row -->
-                  
+            </table>
 
-                        <!-- Content Column -->
-                      
-                    <!--IMPORTANTE DEL FOOTER /.container-fluid -->
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
+            </div> <!-- End /.container-fluid -->
+            
+            </div> <!-- End of Main Content -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -250,7 +214,8 @@ if($datoUser->tipo_user!=1){
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ <!-- Logout Modal-->
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -278,7 +243,6 @@ if($datoUser->tipo_user!=1){
 
     <!-- Custom scripts for all pages-->
     <script src="../../js/sb-admin-2.min.js"></script>
-    <script src="../../js/eventos.js"></script>
 
     <!-- Page level plugins -->
     <script src="../../vendor/chart.js/Chart.min.js"></script>
