@@ -112,7 +112,7 @@ if($datoUser->tipo_user!=1){
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Reservas de Transporte</h2>
+                    <h2>Flota Vehicular</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -179,13 +179,25 @@ if($datoUser->tipo_user!=1){
                     <td><?php print $row['tipo_vehi'] . "\t";?> </td>
                     <td><?php 
                     if($row['estado_vehi']==2) {
-                    ?> 
-                    &nbsp;&nbsp;<button class="button is-primary">Habilitar</button>
+                    ?>
+                            <form class="col" action="../../PHP/procesarMantenimiento.php" method="PUT">
+                                <div class="form-group">
+                                <input type="hidden" name="placa" value="<?php $row['placa'] ;?>" />    
+                                <input type="number" class="form-control form-control-user" 
+                                        placeholder="Kilometros de mantenimiento" name="kmm" required>
+                                </div>
+
+                                <button type="submit" class="button is-danger">
+                                    Habilitar
+                                </button>
+                                
+                            </form>
+                   
                     <?php
                     }
                     if($row['estado_vehi']==1){
                     ?> 
-                    &nbsp;&nbsp;<button class="button is-danger" title="Disabled button" disabled>Habilitado</button>
+                    &nbsp;&nbsp;<button class="button is-primary" title="Disabled button" disabled>Disponible</button>
                     <?php
                     }
                     ?> </td>

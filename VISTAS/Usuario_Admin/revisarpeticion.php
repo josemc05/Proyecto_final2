@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 include("../../PHP/verificar.php");
 include("../../PHP/conexion.php");
@@ -8,7 +8,6 @@ if($datoUser->tipo_user!=1){
     include("../../PHP/salir.php");
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,16 +20,18 @@ if($datoUser->tipo_user!=1){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Revision de Peticiones</title>
+    <title>Flota Vehicular</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
     <!-- Custom styles for this template-->
     <link href="../../css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../css/eles.css" rel="stylesheet">
 
 </head>
 
@@ -51,7 +52,7 @@ if($datoUser->tipo_user!=1){
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider ">
+            <hr class="sidebar-divider " style=" border-top: 1px solid #383838;">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Menú
@@ -72,7 +73,6 @@ if($datoUser->tipo_user!=1){
                 </div>
             
             </li>
-            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -112,7 +112,7 @@ if($datoUser->tipo_user!=1){
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Revision de Peticiones</h2>
+                    <h2>Reservas de Transporte</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -148,135 +148,61 @@ if($datoUser->tipo_user!=1){
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-                
-                    <!-- INICIO DE BARRA -->
-                    <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-                                        <figure style="float: left" class="image is-128x128">
-                                        <img class="is-rounded" src="https://creamas.org/wp-content/uploads/2017/08/foto-edi-pasaporte-carnet-.jpg">
-                                        </figure>
 
-                                    <div class="col mr-2">     
-                                    <h5></h5>    
-                                    <p class="card-text ">Usuario: Juan Carlos </p>
-                                        <p class="card-text">Modelo de Vehiculo: mid-size</p>
-                                        <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha: 05/07/21 01:23am </p>
-                                        <p class="card-text ">Destino: UTP</p>
-                                        <p class="card-text">Numero de pasajeros: 4</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-info">Aprobar</a>    
-                                    <a type="button" class="btn btn-danger">Rechazar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                         <!-- INICIO DE BARRA -->
-                         <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
+            <table class="table">
+                <tr>
+                <td>ID</td>
+                <td>Pasajeros</td>
+                <td>Destino</td>
+                <td>Fecha de inicio</td>
+                <td>Fecha de fin</td>
+                <td>Descripcion</td>
+                <td>Cedula del usuario</td>
+                <td>Placa</td>
+                <td>Cedula de transportista</td>
 
-                                        <figure style="float: left" class="image is-128x128">
-                                        <img class="is-rounded" src="https://creamas.org/wp-content/uploads/2017/08/foto-edi-pasaporte-carnet-.jpg">
-                                        </figure>
+                </tr>
 
-                                    <div class="col mr-2">     
-                                    <h5></h5>    
-                                    <p class="card-text ">Usuario: Juan Carlos </p>
-                                        <p class="card-text">Modelo de Vehiculo: mid-size</p>
-                                        <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha: 05/07/21 01:23am </p>
-                                        <p class="card-text ">Destino: UTP</p>
-                                        <p class="card-text">Numero de pasajeros: 4</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-info">Aprobar</a>    
-                                    <a type="button" class="btn btn-danger">Rechazar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                                        <!-- INICIO DE BARRA -->
-                                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
+                <?php
 
-                                        <figure style="float: left" class="image is-128x128">
-                                        <img class="is-rounded" src="https://creamas.org/wp-content/uploads/2017/08/foto-edi-pasaporte-carnet-.jpg">
-                                        </figure>
 
-                                    <div class="col mr-2">     
-                                    <h5></h5>    
-                                        <p class="card-text ">Usuario: Juan Carlos </p>
-                                        <p class="card-text">Modelo de Vehiculo: mid-size</p>
-                                        <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha:05/0 7/21 01:23am </p>
-                                        <p class="card-text ">Destino: UTP</p>
-                                        <p class="card-text">Numero de pasajeros: 4</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-info">Aprobar</a>    
-                                    <a type="button" class="btn btn-danger">Rechazar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                                        <!-- INICIO DE BARRA -->
-                                        <div class="row-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">        
+                include("../../configuracion/conexion.php");
 
-                                        <figure style="float: left" class="image is-128x128">
-                                        <img class="is-rounded" src="https://creamas.org/wp-content/uploads/2017/08/foto-edi-pasaporte-carnet-.jpg">
-                                        </figure>
 
-                                    <div class="col mr-2">     
-                                    <h5></h5>    
-                                        <p class="card-text ">Usuario: Juan Carlos </p>
-                                        <p class="card-text">Modelo de Vehiculo: mid-size</p>
-                                        <p class="card-text">Matricula: AA0001</p>
-                                        <p class="card-text ">Fecha:05/0 7/21 01:23am </p>
-                                        <p class="card-text ">Destino: UTP</p>
-                                        <p class="card-text">Numero de pasajeros: 4</p>
-                                    </div>    
-                                    <div class="col-auto">
-                                    <a type="button" class="btn btn-info">Aprobar</a>    
-                                    <a type="button" class="btn btn-danger">Rechazar</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- FINAL DE BARRA -->
-                    </div>
-                <!-- /.container-fluid -->
+                $sql = 'SELECT * FROM reservas';
+                foreach ($conn->query($sql) as $row) {
+                    ?> 
+                    <tr>
 
-                </div>
-            <!-- End of Main Content -->
+                    <td></td>
+                    <td><?php print $row['id_reserva'] . "\t";?> </td>
+                    <td><?php print $row['pasajeros'] . "\t";?> </td>
+                    <td><?php print $row['destino'] . "\t";?> </td>
+                    <td><?php print $row['fecha_inicio'] . "\n";?> </td>
+                    <td><?php print $row['fecha_fin'] . "\t";?> </td>
+                    <td><?php print $row['descripcion'] . "\t";?> </td>
+                    <td><?php print $row['re_cedula_user'] . "\t";?> </td>
+                    <td><?php print $row['re_placa'] . "\n";?> </td>
+                    <td><?php print $row['re_cedula_trans'] . "\n";?> </td>
+                    <td>
+                    &nbsp;&nbsp;<button class="button is-primary">Aceptar</button>
+                          &nbsp;<button class="button is-danger">Rechazar</button>
+                    </td>
+                    
+                    </tr>
+                    <?php
+                } 
 
+                ?> 
+
+            </table>
+
+            </div> <!-- End /.container-fluid -->
+            
+            </div> <!-- End of Main Content -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -297,8 +223,10 @@ if($datoUser->tipo_user!=1){
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ <!-- Logout Modal-->
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

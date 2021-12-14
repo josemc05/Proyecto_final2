@@ -28,7 +28,7 @@
 
             if ($tipo==1)
             {
-                header("Location: ../VISTAS/Usuario_Admin/revisarpeticion.php");
+                header("Location: ../VISTAS/Usuario_Admin/usuariosNomina.php");
             }
             else if($tipo==2)
             {
