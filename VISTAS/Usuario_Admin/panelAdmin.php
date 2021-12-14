@@ -1,10 +1,10 @@
 <?php
-    include("../PHP/verificar.php");
-    include("../PHP/consultaUser.php");
+    include("../../PHP/verificar.php");
+    include("../../PHP/consultaUser.php");
 
     if($datoUser->tipo_user!=1)
     {
-        include("../PHP/salir.php");
+        include("../../PHP/salir.php");
     }
 /*
 include("../../PHP/verificar.php");
@@ -123,10 +123,12 @@ if($datoUsuario->nivel!=1){
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 
+                                <span style="padding:6%;"><?php echo $datoUser->nombre_user." ".$datoUser->apellido_user; ?></span>
+                                <img style="width:70px; height:70px; padding:10%;" src="../../IMG/<?php echo $datoUser->foto_user;?>">
 
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jose Cuevas</span>
+                                <!--<span class="mr-2 d-none d-lg-inline text-gray-600 small">Jose Cuevas</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../../img/user.jpg">
+                                    src="../../img/user.jpg">-->
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -211,15 +213,15 @@ if($datoUsuario->nivel!=1){
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">¿Seguro desea cerrar sesion?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Seleccione "Logout" si esta seguro que desea cerrar sesion.</div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="../../PHP/salir.php">Logout</a> <!--PHP-->
+                    <a class="btn btn-primary" href="../../index.php">Logout</a>
                 </div>
             </div>
         </div>
