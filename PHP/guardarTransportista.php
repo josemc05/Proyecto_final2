@@ -20,7 +20,7 @@ $sentencia->bindParam(':password', $password);
 $sentencia->bindParam(':tipo', $nivel);
 $sentencia->bindParam(':foto', $foto);
 $sentencia->execute();
-echo '<meta http-equiv="refresh" content="0; url=../../index.php">';
+echo '<meta http-equiv="refresh" content="0; url=../VISTAS/Usuario_Admin/agregarTransport.php">';
 }
 catch(PDOException $e){
 if($e->errorInfo[1]==1062){
@@ -29,7 +29,7 @@ if($e->errorInfo[1]==1062){
    , 'alert("Ese correo electronico ya se encuentra registrado");'
    , '</script>'
 ;
-    echo '<meta http-equiv="refresh" content="0; url=../../index.php">';
+    echo '<meta http-equiv="refresh" content="0; url=../VISTAS/Usuario_Admin/agregarTransport.php">';
 }
 else{
     echo "otro error"; echo $e;

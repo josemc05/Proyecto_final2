@@ -18,13 +18,13 @@ if (isset($_POST['boton'])){
                 $stmt = $mbd->prepare($query);
                 // execute the query
                 $stmt->execute();
-                /*$stmt = $mbd->prepare( "DELETE FROM reservas WHERE id_reserva='$id'" );
-                $stmt->execute();*/
+                $stmt = $mbd->prepare( "DELETE FROM reservas WHERE id_reserva='$id'" );
+                $stmt->execute();
                 header("Location: ../VISTAS/Usuario_Transportista/reservasTransportista.php");
             }
             else{
-               /* $stmt = $mbd->prepare( "DELETE FROM reservas WHERE id_reserva='$id'" );
-                $stmt->execute();*/
+               $stmt = $mbd->prepare( "DELETE FROM reservas WHERE id_reserva='$id'" );
+                $stmt->execute();
                 header("Location: ../VISTAS/Usuario_Transportista/reservasTransportista.php");
             }
         }
