@@ -18,7 +18,7 @@
         $datos = new usuario ($foto,$nombre,$apellido,$cedula,$email,$contraseña,$nivel);
 
         //$insertar = $conn->prepare("INSERT INTO usuario (nombre, apellido, email, password) VALUES (:nombre, :apellido, :email, :password)");
-        $insertar = $conn->prepare("INSERT INTO usuarios (apellido_user, cedula_user, correo_user, foto_user, nombre_user, password, tipo_user) VALUES (?,?,?,?,?,?,?)");
+        $insertar = $conn->prepare("INSERT INTO usuarios (apellido_user, cedula_user, correo_user, foto_user, nombre_user, password_user, tipo_user) VALUES (?,?,?,?,?,?,?)");
         try
         {
             $insertar->bindParam(1,$apellido);
