@@ -1,5 +1,4 @@
 <?php
-session_start();
 function desplegarUser($mbd){
 $cedula=$_SESSION['cedula_user'];
 $output=" ";

@@ -1,14 +1,13 @@
 <?php
-include("../../PHP/conexion.php");
-/*
+session_start();
 include("../../PHP/verificar.php");
-include("../../PHP/consultarUser.php");
-if($datoUsuario->nivel!=1){
+include("../../PHP/conexion.php");
+include("../../PHP/consultaUser.php");
+include("../../PHP/metodosGlobales.php");
+if($datoUser->tipo_user!=1){
     include("../../PHP/salir.php");
 }
-*/
-include("../../PHP/conexion.php");
-include("../../PHP/metodosGlobales.php");
+
 
 function desplegarCedula($mbd){
     $output='';
@@ -98,7 +97,11 @@ function desplegarCedula($mbd){
                     </div>
                 </div>
             </li>
-        
+            <li class="nav-item">
+                <a class="nav-link" href="flota.php"> <!--PHP-->
+                    <i class="fas fa-car"></i>
+                    <span>Flota Vehicular</span></a>
+            </li>
 
 
         </ul>

@@ -1,8 +1,14 @@
 <?php
 include("../../PHP/reservasRegular.php");
 
+session_start();
+include("../../PHP/verificar.php");
 include("../../PHP/conexion.php");
+include("../../PHP/consultaUser.php");
 include("../../PHP/metodosGlobales.php");
+if($datoUser->tipo_user!=3){
+    include("../../PHP/salir.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,8 +1,14 @@
 <?php
-include("../../PHP/metodosTranspor.php");
+session_start();
+include("../../PHP/verificar.php");
 include("../../PHP/conexion.php");
+include("../../PHP/consultaUser.php");
 include("../../PHP/metodosGlobales.php");
+if($datoUser->tipo_user!=2){
+    include("../../PHP/salir.php");
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,12 +58,7 @@ include("../../PHP/metodosGlobales.php");
             </div>
 
             <!-- Nav Item - Dashboard -->
-            
-            <li class="nav-item">
-                <a class="nav-link" href="reporteEstado.php"> <!--PHP-->
-                    <i class="fas fa-car"></i>
-                    <span>Estado</span></a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" href="#"> <!--PHP-->
                     <i class="far fa-list-alt"></i>

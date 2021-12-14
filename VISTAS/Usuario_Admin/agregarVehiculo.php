@@ -1,11 +1,14 @@
-<?php/*
+<?php 
+session_start();
 include("../../PHP/verificar.php");
-include("../../PHP/consultarUser.php");
-if($datoUsuario->nivel!=1){
+include("../../PHP/conexion.php");
+include("../../PHP/consultaUser.php");
+include("../../PHP/metodosGlobales.php");
+if($datoUser->tipo_user!=1){
     include("../../PHP/salir.php");
 }
-*/
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +87,11 @@ if($datoUsuario->nivel!=1){
                     </div>
                 </div>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="flota.php"> <!--PHP-->
+                    <i class="fas fa-car"></i>
+                    <span>Flota Vehicular</span></a>
+            </li>
 
         </ul>
         <!-- End of Sidebar -->
@@ -116,9 +123,8 @@ if($datoUsuario->nivel!=1){
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jose Cuevas</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../img/user.jpg">
+                                <?php echo desplegarUser($mbd);
+                                ?>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -222,21 +228,21 @@ if($datoUsuario->nivel!=1){
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ <!-- Logout Modal-->
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">¿Seguro desea cerrar sesion?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Seleccione "Logout" si esta seguro que desea cerrar sesion.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="../../index.php">Logout</a>
+                    <a class="btn btn-primary" href="../../PHP/salir.php">Logout</a> <!--PHP-->
                 </div>
             </div>
         </div>

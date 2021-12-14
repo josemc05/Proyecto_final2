@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../PHP/verificar.php");
 include("../PHP/datosUser.php");
 ?>
@@ -40,7 +41,7 @@ include("../PHP/datosUser.php");
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <br><br>
-                    <h3 class="title has-text-black">Registro</h3>
+                    <h3 class="title has-text-black">Actualización de Datos</h3>
                     <div class="box">
                     <form action="../PHP/procesarEditar.php"  method="post" name="registro" enctype="multipart/form-data">
                         <fieldset>    

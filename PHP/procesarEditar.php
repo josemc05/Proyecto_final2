@@ -20,8 +20,10 @@ $datoUsuario=$resultado->fetch(PDO::FETCH_OBJ);
 $tipo=$datoUsuario->tipo_user;
 
 
-$actualizacion=$mbd->query("UPDATE usuarios SET nombre_user='$nuevoN', apellido_user='$nuevoA', foto_user='$nuevoF' WHERE cedula_user='$id'");
-
+$query="UPDATE usuarios SET nombre_user='$nuevoN', apellido_user='$nuevoA', foto_user='$nuevoF' WHERE cedula_user='$id'";
+$stmt = $mbd->prepare($query);
+// execute the query
+$stmt->execute();
         if ($tipo==1)
             {
                 header("Location: ../VISTAS/Usuario_Admin/revisarpeticion.php");
