@@ -179,20 +179,11 @@ if($datoUser->tipo_user!=1){
                     <td><?php print $row['tipo_vehi'] . "\t";?> </td>
                     <td><?php 
                     if($row['estado_vehi']==2) {
-                    ?>
-                            <form class="col" action="../../PHP/procesarMantenimiento.php" method="PUT">
-                                <div class="form-group">
-                                <input type="hidden" name="placa" value="<?php $row['placa'] ;?>" />    
-                                <input type="number" class="form-control form-control-user" 
-                                        placeholder="Kilometros de mantenimiento" name="kmm" required>
-                                </div>
-
-                                <button type="submit" class="button is-danger">
-                                    Habilitar
-                                </button>
-                                
-                            </form>
-                   
+                       $placa= $row['placa'] ?>
+                                <form action="procesarMantenimiento.php"  method="Post">   
+                                <input type="hidden"  name="placa"  value="<?php print $row['placa'];?>" />
+                                &nbsp;&nbsp;<button  type="submit" class="button is-link">Habilitar</button>
+                                </form>
                     <?php
                     }
                     if($row['estado_vehi']==1){

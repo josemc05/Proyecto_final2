@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include("../../PHP/verificar.php");
 include("../../PHP/conexion.php");
@@ -7,8 +7,14 @@ include("../../PHP/metodosGlobales.php");
 if($datoUser->tipo_user!=1){
     include("../../PHP/salir.php");
 }
-?>
 
+if ($_POST['placa'] != '') {
+				$placa= $_POST['placa'];
+			}else{
+			}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,18 +26,17 @@ if($datoUser->tipo_user!=1){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Flota Vehicular</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>General</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Custom styles for this template-->
-    <link href="../../css/sb-admin-2.css" rel="stylesheet">
-    <link href="../../css/eles.css" rel="stylesheet">
+    <link href="../../CSS/sb-admin-2.css" rel="stylesheet">
+    <link href="../../CSS/maquillaje.css" rel="stylesheet">
 
 </head>
 
@@ -44,7 +49,7 @@ if($datoUser->tipo_user!=1){
         <ul class="navbar-nav bg-gradient-primary2 sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="revisarpeticion.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="revisarpeticion.php"> <!--PHP-->
                 <div class="sidebar-brand-icon ">
                     <img src="../../IMG/logoUTPwhite.png" width="65" height="65"></img>
                 </div>
@@ -52,13 +57,14 @@ if($datoUser->tipo_user!=1){
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider " style=" border-top: 1px solid #383838;">
+            <hr class="sidebar-divider ">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Menú
             </div>
 
             <!-- Nav Item - Dashboard -->
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -73,6 +79,7 @@ if($datoUser->tipo_user!=1){
                 </div>
             
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -94,6 +101,7 @@ if($datoUser->tipo_user!=1){
                     <span>Flota Vehicular</span></a>
             </li>
 
+
         </ul>
         <!-- End of Sidebar -->
 
@@ -112,7 +120,7 @@ if($datoUser->tipo_user!=1){
                     </button>
 
                     <!-- Topbar Search -->
-                    <h2>Reservas de Transporte</h2>
+                    <h2>Habilitar vehiculo</h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -148,70 +156,82 @@ if($datoUser->tipo_user!=1){
                 </nav>
                 <!-- End of Topbar -->
 
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
+                <!-- Begin Page Content -->
+                <div class="container">
 
+                    <!-- SECCIONES PEGAR AQUI -->
+                                    <div class="row">
+                                        <div class="col-8 mx-auto">
+                                        <div class="col">
+                                            <div class="p-5">
+                                                <div class="row-fluid">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="row no-gutters align-items-center">  
+                                                              
+                                                                <img style="height: 19%;width: 19%; padding: -4%; margin: -1.5%;"  src="../../IMG/v2.png">
 
-            <table class="table">
-                <tr>
-                <td>ID</td>
-                <td>Pasajeros</td>
-                <td>Destino</td>
-                <td>Fecha de inicio</td>
-                <td>Fecha de fin</td>
-                <td>Descripcion</td>
-                <td>Cedula del usuario</td>
-                <td>Placa</td>
-                <td>Cedula de transportista</td>
-
-                </tr>
-
-                <?php
-
-
-                include("../../configuracion/conexion.php");
-
-
-                $sql = 'SELECT * FROM reservas';
-                foreach ($conn->query($sql) as $row) {
-                    ?> 
-                    <tr>
-
-                    <td></td>
-                    <td><?php print $row['id_reserva'] . "\t";?> </td>
-                    <td><?php print $row['pasajeros'] . "\t";?> </td>
-                    <td><?php print $row['destino'] . "\t";?> </td>
-                    <td><?php print $row['fecha_inicio'] . "\n";?> </td>
-                    <td><?php print $row['fecha_fin'] . "\t";?> </td>
-                    <td><?php print $row['descripcion'] . "\t";?> </td>
-                    <td><?php print $row['re_cedula_user'] . "\t";?> </td>
-                    <td><?php print $row['re_placa'] . "\n";?> </td>
-                    <td><?php print $row['re_cedula_trans'] . "\n";?> </td>
-                    <td> 
-
-                    <form action="aceptarpeticion.php">
-                        
-                    &nbsp;&nbsp;<button class="button is-primary">Aceptar</button>
-                        </form>
-
-
-                    <form action="rechazarpeticion.php">
-                          &nbsp;<button class="button is-danger">Rechazar</button>
-                          </form>
-
-                    </td>
+                                                                <div class="col mr-2">        
+                                                                    <h5 style="color: darkmagenta; font-weight: bold; text-align: center;">Vehiculo de placa: <?php echo $placa;?></h5>      
+                                                                </div>    
+                                                                <div class="col-auto"> 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="text-center">
+                                                    <h1 class="h4 text-gray-900 mb-4" style="font-size: 15px;">Llene el siguiente formulario de solicitud de vehiculo</h1>
+                                                </div>
+                                                <form class="col" action="../../PHP/guardarMantenimiento.php" method="POST">
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control form-control-user"  name="placa" value="<?php echo $placa;?>">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-control form-control-user" 
+                                                            placeholder="Kilometros"  name="kdm" required>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                        Registrar
+                                                    </button>
+                                                    
+                                                </form>
+                            
+                                                
+                                            </div>
+                                            </div>
                     
-                    </tr>
-                    <?php
-                } 
+                                            <!-- Earnings (Monthly) Card Example -->
+                                            
+                                            <!-- Earnings (Monthly) Card Example -->
+                                            
+                    
+                                            <!-- Earnings (Monthly) Card Example -->
+                                            
+                    
+                                            <!-- Pending Requests Card Example -->
+                                            
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Content Row -->
+                    
+                    
+                                            <!-- Area Chart -->
+                                            
+                                        <!-- Content Row -->
+                                      
+                    
+                                            <!-- Content Column -->
+                                          
+                                        <!--IMPORTANTE DEL FOOTER /.container-fluid -->
+                                    </div>
+                                    <!-- /.container-fluid -->
+                    
+                                </div>
+            <!-- End of Main Content -->
 
-                ?> 
-
-            </table>
-
-            </div> <!-- End /.container-fluid -->
-            
-            </div> <!-- End of Main Content -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -234,8 +254,7 @@ if($datoUser->tipo_user!=1){
     </a>
 
     <!-- Logout Modal-->
- <!-- Logout Modal-->
- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
