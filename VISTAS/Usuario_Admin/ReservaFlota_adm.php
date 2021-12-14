@@ -17,6 +17,24 @@ function desplegarCedula($mbd){
         }
     return $output;
     }
+
+    function desplegarPlaca($mba){
+        $output='';
+        $PlacaRegulares=$mba->query("SELECT placa FROM vehiculos WHERE estado_vehi=1");
+        while($consultaPlaca=$PlacaRegulares->fetch(PDO::FETCH_OBJ)) {
+           $output.='<option name="nivel" value="'.$consultaPlaca->placa.'">'.$consultaPlaca->placa.'</option>';
+            }
+        return $output;
+        }
+
+        function desplegarCedulaT($mbd){
+            $output='';
+            $cedulaTRegulares=$mbd->query("SELECT cedula_user FROM usuarios WHERE tipo_user=2");
+            while($consultaCedulaT=$cedulaTRegulares->fetch(PDO::FETCH_OBJ)) {
+               $output.='<option name="nivel" value="'.$consultaCedulaT->cedula_user.'">'.$consultaCedulaT->cedula_user.'</option>';
+                }
+            return $output;
+            }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -225,6 +243,22 @@ function desplegarCedula($mbd){
                                                     <label>Descripcion del viaje</label>
                                                     <textarea maxlenght="500" class="form-control" id="exampleFormControlTextarea1" rows="3" name="descrip" id="descrip" required></textarea>
                                                     </div>
+                                                    <!--  Placas-->
+                                                    <div class="form-group">
+                                                            <select class="form-select" name="placa" id="placa" required>
+                                                                <option selected>Seleccione la placa del carro</option>
+                                                                <?php echo desplegarPlaca($mbd); 
+                                                                ?> 
+                                                            </select>
+                                                            </div> 
+                                                    <!--  Transportista-->
+                                                     <div class="form-group">
+                                                            <select class="form-select" name="cedulat" id="cedulat" required>
+                                                                <option selected>Seleccione la cedula del transportista</option>
+                                                                <?php echo desplegarCedulaT($mbd); 
+                                                                ?> 
+                                                            </select>
+                                                            </div>       
                                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                                         Solicitar flota vehicular
                                                 </buttton>
